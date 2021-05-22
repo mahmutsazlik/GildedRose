@@ -1,0 +1,42 @@
+====================================
+Yaldızlı Gül Gereksinimleri Şartname
+====================================
+
+Merhaba, Gilded Rose takımına hoş geldiniz. Bildiğiniz gibi, Allison adında dost canlısı
+bir hancı tarafından işletilen seçkin bir şehirde birinci sınıf bir konuma sahip küçük
+bir misafirhaneyiz. Ayrıca sadece en iyi malları alıp satıyoruz.
+Maalesef, ürünlerimiz tarihe göre satışlarına yaklaştıkça kalitesi sürekli olarak düşüyor.
+Envanterimizi bizim için güncelleyen bir sistemimiz var. Yeni maceralara atılan Leeroy
+adında saçma sapan bir tip tarafından geliştirildi. Göreviniz, yeni bir ürün kategorisi
+satmaya başlayabilmemiz için yeni özelliği sistemimize eklemektir. Öncelikle sistemimize
+bir giriş:
+
+- Tüm eşyalar, ürünü satmamız gereken gün sayısını gösteren bir SellIn değerine sahiptir.
+- Tüm öğelerin, öğenin ne kadar değerli olduğunu gösteren bir Kalite değeri vardır
+- Her günün sonunda, sistemimiz her öğe için her iki değeri de düşürür
+
+Oldukça basit, değil mi? İşte işin ilginçleştiği yer burası:
+
+- Son satış tarihi geçtiğinde, Kalite iki kat daha hızlı düşer
+- Bir öğenin kalitesi asla olumsuz değildir
+- "Yaşlı Brie" aslında yaşlandıkça Kalitesi artar
+- Bir öğenin kalitesi hiçbir zaman 50'yi geçmez
+- Efsanevi bir ürün olan "Sülfür" asla satılmamalı veya Kalitesinde düşüş olmamalıdır.
+- "Sahne arkası geçişleri", tıpkı yaşlı brie gibi, SellIn değeri yaklaştıkça Kalitesi artar;
+Kalite, 10 gün veya daha kısa olduğunda 2, 5 gün veya daha kısa olduğunda 3 artar, ancak
+Konserden sonra kalite 0'a düşüyor
+
+Kısa bir süre önce bir uyarlanmış ürün tedarikçisi imzaladık. Bu, sistemimizde bir
+güncelleme gerektirir:
+
+- "Conjured" öğelerin Kalitesi normal öğelere göre iki kat daha hızlı düşer
+
+Her şey düzgün çalıştığı sürece, UpdateQuality yönteminde herhangi bir değişiklik yapmaktan
+ve yeni bir kod eklemekten çekinmeyin. Ancak, Öğe sınıfını veya Öğeler özelliğini, bunlar
+aşağıdakilere ait olduğu için değiştirmeyin.
+Köşedeki goblin, paylaşılan kod sahipliğine inanmadığı için sizi öfkelendirecek ve tek atış
+ yapacak (isterseniz UpdateQuality yöntemini ve Items özelliğini statik hale getirebilirsiniz,
+ biz de sizin yerinize bakacağız).
+
+Sadece açıklığa kavuşturmak için, bir ürünün Kalitesi asla 50'nin üzerine çıkamaz,
+ancak "Sülfür" efsanevi bir üründür ve bu nedenle Kalitesi 80'dir ve asla değişmez.
